@@ -1,0 +1,10 @@
+<?php
+
+
+use App\Http\Controllers\Web\Dashboard\DashboardController;
+
+use Illuminate\support\Facades\Route;
+
+
+Route::get('/', [DashboardController::class, 'dashboard']);
+Route::get('/blog', [DashboardController::class, 'blog']);
