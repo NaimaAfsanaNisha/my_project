@@ -1,15 +1,43 @@
 
-<!-- Meta -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Anil z" name="author">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Shopwise is Powerful features and You Can Use The Perfect Build this Template For Any eCommerce Website. The template is built for sell Fashion Products, Shoes, Bags, Cosmetics, Clothes, Sunglasses, Furniture, Kids Products, Electronics, Stationery Products and Sporting Goods.">
-<meta name="keywords" content="ecommerce, electronics store, Fashion store, furniture store,  bootstrap 4, clean, minimal, modern, online store, responsive, retail, shopping, ecommerce store">
 
-<!-- SITE TITLE -->
-<title>Shopwise - eCommerce Bootstrap 5 HTML Template</title>
-<!-- Favicon Icon -->
-<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+<!-- LOADER -->
+<div class="preloader">
+    <div class="lds-ellipsis">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<!-- END LOADER -->
 
-@include('frontend.partials.style')
+<!-- START HEADER -->
+<header class="header_wrap">
+    <div class="bottom_header dark_skin main_menu_uppercase border-top">
+    	<div class="container">
+            <div class="row align-items-center"> 
+                <div class="col-lg-12 col-md-8 col-sm-6 col-12">
+                	<nav class="navbar navbar-expand-lg">
+                    	<button class="navbar-toggler side_navbar_toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSidetoggle" aria-expanded="false"> 
+                            <span class="ion-android-menu"></span>
+                        </button>
+                        <div class="pr_search_icon">
+                            <a href="javascript:void(0);" class="nav-link pr_search_trigger"><i class="linearicons-magnifier"></i></a>
+                        </div> 
+                        <div class="collapse navbar-collapse mobile_side_menu" id="navbarSidetoggle">
+                            <ul class="navbar-nav">
+                                <li class="">
+                                    <a class="nav-link {{ Route::is('home') ? "active" : "" }}" href="{{ route('home') }}">Home</a> 
+                                </li>
+                                <li><a class="nav-link nav_item {{ Route::is('contact') ? "active" : "" }}" href="contact.html">Contact Us</a></li> 
+                            </ul>
+                        </div>
+                        <div class="contact_phone contact_support">
+                            <span class=" btn btn-fill-out staggered-animation text-uppercase animated slideInLeft text-white">Join as Author</span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- END HEADER -->

@@ -18,7 +18,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/', function () {
-   
+ dd('working'); 
     return view('frontend.app');
 })->name('home');
 

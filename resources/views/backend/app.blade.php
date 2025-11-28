@@ -339,9 +339,9 @@
     <!-- Switcher-->
 
     <!-- GLOBAL-LOADER -->
-    <div id="global-loader">
-        <img src="{{ asset('dashboard/assets/images/loader.svg') }}" class="loader-img" alt="Loader">
-    </div>
+{{--    <div id="global-loader">--}}
+{{--        <img src="{{ asset('dashboard/assets/images/loader.svg') }}" class="loader-img" alt="Loader">--}}
+{{--    </div>--}}
     <!-- /GLOBAL-LOADER -->
 
     <!-- PAGE -->
@@ -362,7 +362,7 @@
                                 class="header-brand-img light-logo1" alt="logo">
                         </a>
                         <!-- LOGO -->
-                        
+
                         <div class="d-flex order-lg-2 ms-auto header-right-icons">
                             <div class="dropdown d-xl-none d-md-block d-none">
                                 <a href="#" class="nav-link icon" data-bs-toggle="dropdown">
@@ -417,7 +417,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                            
+
                                         <div class="dropdown d-md-flex profile-1">
                                             <a href="#" data-bs-toggle="dropdown"
                                                 class="nav-link pe-2 leading-none d-flex animate">
@@ -448,14 +448,17 @@
                                                     </svg>
                                                     Settings
                                                 </a>
-                                                <a class="dropdown-item" href="login.html">
+                                                <form method="POST" action="{{ route('logout') }}">
+                                                    @csrf
+                                                <button type="submit" class="dropdown-item">
                                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-inner-icn"
                                                         enable-background="new 0 0 24 24" viewBox="0 0 24 24">
                                                         <path
                                                             d="M10.6523438,16.140625c-0.09375,0.09375-0.1464233,0.2208862-0.1464233,0.3534546c0,0.276123,0.2238159,0.5,0.499939,0.500061c0.1326294,0.0001221,0.2598267-0.0525513,0.3534546-0.1464844l4.4941406-4.4941406c0.000061-0.000061,0.0001221-0.000061,0.0001831-0.0001221c0.1951294-0.1952515,0.1950684-0.5117188-0.0001831-0.7068481L11.359314,7.1524048c-0.1937256-0.1871338-0.5009155-0.1871338-0.6947021,0c-0.1986084,0.1918335-0.2041016,0.5083618-0.0122681,0.7069702L14.2930298,11.5H2.5C2.223877,11.5,2,11.723877,2,12s0.223877,0.5,0.5,0.5h11.7930298L10.6523438,16.140625z M16.4199829,3.0454102C11.4741821,0.5905762,5.4748535,2.6099243,3.0200195,7.5556641C2.8970337,7.8029175,2.9978027,8.1030884,3.2450562,8.2260742C3.4923706,8.3490601,3.7925415,8.248291,3.9155273,8.0010376c0.8737793-1.7612305,2.300354-3.1878052,4.0615845-4.0615845C12.428833,1.730835,17.828064,3.5492554,20.0366821,8.0010376c2.2085571,4.4517212,0.3901367,9.8509521-4.0615845,12.0595703c-4.4517212,2.2085571-9.8510132,0.3901367-12.0595703-4.0615845c-0.1229858-0.2473145-0.4231567-0.3480835-0.6704102-0.2250977c-0.2473145,0.1229858-0.3480835,0.4230957-0.2250977,0.6704102c1.6773682,3.4109497,5.1530762,5.5667114,8.9541016,5.5537109c3.7976685,0.0003662,7.2676392-2.1509399,8.9560547-5.5526733C23.3850098,11.4996338,21.3657227,5.5002441,16.4199829,3.0454102z" />
                                                     </svg>
                                                     Log out
-                                                </a>
+                                                </button>
+                                                </form>
                                             </div>
                                         </div>
                                         <!-- Profile -->
@@ -475,52 +478,8 @@
             </div>
             <!-- /app-Header -->
 
-            <!--APP-SIDEBAR-->
-            <div class="sticky">
-                <div class="app-sidebar__overlay" data-bs-toggle="sidebar"></div>
-                <div class="app-sidebar">
-                    <div class="side-header">
-                        <a class="header-brand1" href="{{route('home')}}">
-                            <img src="{{ asset('dashboard/assets/images/brand/logo.png') }}"
-                                class="header-brand-img desktop-logo" alt="logo">
-                            <img src="{{ asset('dashboard/assets/images/brand/logo-1.png') }}"
-                                class="header-brand-img toggle-logo" alt="logo">
-                            <img src="{{ asset('dashboard/assets/images/brand/logo-2.png') }}"
-                                class="header-brand-img light-logo" alt="logo">
-                            <img src="{{ asset('dashboard/assets/images/brand/logo-3.png') }}"
-                                class="header-brand-img light-logo1" alt="logo">
-                        </a><!-- LOGO -->
-                    </div>
-                    <div class="main-sidemenu">
-                        <div class="slide-left disabled" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg"
-                                fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z" />
-                            </svg>
-                        </div>
-                        <ul class="side-menu">
-                            <li>
-                                <h3>Menu</h3>
-                            </li>
-                            <li class="slide">
-                                <a class="side-menu__item has-link" data-bs-toggle="slide" href="{{ route('home') }}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon"
-                                        enable-background="new 0 0 24 24" viewBox="0 0 24 24">
-                                        <path
-                                            d="M19.9794922,7.9521484l-6-5.2666016c-1.1339111-0.9902344-2.8250732-0.9902344-3.9589844,0l-6,5.2666016C3.3717041,8.5219116,2.9998169,9.3435669,3,10.2069702V19c0.0018311,1.6561279,1.3438721,2.9981689,3,3h2.5h7c0.0001831,0,0.0003662,0,0.0006104,0H18c1.6561279-0.0018311,2.9981689-1.3438721,3-3v-8.7930298C21.0001831,9.3435669,20.6282959,8.5219116,19.9794922,7.9521484z M15,21H9v-6c0.0014038-1.1040039,0.8959961-1.9985962,2-2h2c1.1040039,0.0014038,1.9985962,0.8959961,2,2V21z M20,19c-0.0014038,1.1040039-0.8959961,1.9985962-2,2h-2v-6c-0.0018311-1.6561279-1.3438721-2.9981689-3-3h-2c-1.6561279,0.0018311-2.9981689,1.3438721-3,3v6H6c-1.1040039-0.0014038-1.9985962-0.8959961-2-2v-8.7930298C3.9997559,9.6313477,4.2478027,9.0836182,4.6806641,8.7041016l6-5.2666016C11.0455933,3.1174927,11.5146484,2.9414673,12,2.9423828c0.4853516-0.0009155,0.9544067,0.1751099,1.3193359,0.4951172l6,5.2665405C19.7521973,9.0835571,20.0002441,9.6313477,20,10.2069702V19z" />
-                                    </svg>
-                                    <span class="side-menu__label">Dashboard</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg"
-                                fill="#7b8191" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/APP-SIDEBAR-->
+            {{-- include --}}
+            @include('backend.partials.sidebar')
 
           @yield('content')
         </div>

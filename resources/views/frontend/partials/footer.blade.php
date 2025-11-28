@@ -1,3 +1,4 @@
+<a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a> 
 <!-- START FOOTER -->
 <footer class="bg_gray">
 	<div class="footer_top small_pt pb_20">
@@ -138,4 +139,3 @@
 <!-- END FOOTER -->
 
 
-@include('frontend.partials.script')
